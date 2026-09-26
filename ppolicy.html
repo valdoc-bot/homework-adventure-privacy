@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homework Adventure Privacy Policy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#FFFCF6;
+    --surface:#FFFFFF;
+    --ink:#2B2118;
+    --ink-soft:#6E6053;
+    --accent:#E8720C;
+    --accent-soft:#FDE9D3;
+    --sky:#0E88BE;
+    --line:#EAE0D0;
+    --code-bg:#F5EFE3;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1712;
+      --surface:#241F19;
+      --ink:#F3EBDF;
+      --ink-soft:#B9AC9A;
+      --accent:#F2965A;
+      --accent-soft:#3A2A1B;
+      --sky:#5FC3E8;
+      --line:#3A3226;
+      --code-bg:#2C2620;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1712;
+    --surface:#241F19;
+    --ink:#F3EBDF;
+    --ink-soft:#B9AC9A;
+    --accent:#F2965A;
+    --accent-soft:#3A2A1B;
+    --sky:#5FC3E8;
+    --line:#3A3226;
+    --code-bg:#2C2620;
+    color-scheme: dark;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{ margin:0; }
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height:1.65;
+    padding-inline:20px;
+    padding-block:0;
+  }
+  h1,h2{
+    font-family:'Fraunces', Georgia, serif;
+    color:var(--ink);
+    line-height:1.15;
+    text-wrap:balance;
+  }
+  a{ color:var(--sky); }
+  a:not(.pill){ text-underline-offset:3px; }
+
+  .wrap{ max-width:700px; margin:0 auto; }
+
+  header.top{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding-block:28px 8px;
+  }
+  .mark{
+    width:44px; height:44px; border-radius:13px;
+    background:linear-gradient(160deg, var(--accent), #C4570A);
+    display:flex; align-items:center; justify-content:center;
+    color:#fff; font-family:'Fraunces', serif; font-weight:600; font-size:19px;
+    flex:none;
+    box-shadow:0 3px 0 rgba(0,0,0,0.15);
+  }
+  .brand{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:17px;
+  }
+  .brand small{
+    display:block;
+    font-family:'Public Sans', sans-serif;
+    font-weight:400;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-top:1px;
+  }
+
+  h1.title{ font-size:clamp(28px,5vw,38px); margin:18px 0 6px; }
+  .updated{
+    color:var(--ink-soft); font-size:13.5px; margin-bottom:28px;
+  }
+  .updated strong{ color:var(--ink); font-weight:600; }
+
+  .lede{
+    font-size:16.5px;
+    color:var(--ink-soft);
+    max-width:56ch;
+    margin-bottom:30px;
+  }
+
+  nav.toc{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:18px 22px;
+    margin-bottom:40px;
+  }
+  nav.toc .label{
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  nav.toc ol{
+    list-style:none; margin:0; padding:0;
+    display:grid; grid-template-columns:1fr 1fr; gap:6px 20px;
+  }
+  nav.toc li a{
+    color:var(--ink); text-decoration:none; font-size:14.5px;
+  }
+  nav.toc li a:hover{ color:var(--accent); }
+  nav.toc li::before{
+    content: counter(item) ". ";
+    counter-increment: item;
+    color:var(--accent);
+    font-weight:700;
+  }
+  nav.toc ol{ counter-reset:item; }
+
+  section{ margin-bottom:38px; scroll-margin-top:16px; }
+  section h2{
+    font-size:22px;
+    margin:0 0 12px;
+    padding-top:8px;
+    border-top:1px solid var(--line);
+  }
+  section:first-of-type h2{ border-top:none; padding-top:0; }
+  section p{ margin:0 0 14px; max-width:66ch; }
+  section ul{ margin:0 0 14px; padding-left:20px; max-width:64ch; }
+  section li{ margin-bottom:8px; }
+
+  .card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:18px 20px;
+    margin:16px 0;
+  }
+  .card h3{
+    font-size:14.5px;
+    margin:0 0 6px;
+    font-family:'Public Sans', sans-serif;
+    font-weight:700;
+  }
+  .card p{ margin:0; font-size:14.5px; color:var(--ink-soft); }
+
+  .badge-row{ display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 4px; }
+  .badge{
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--accent-soft); color:var(--accent);
+    border-radius:999px; padding:6px 13px;
+    font-size:13px; font-weight:700;
+  }
+
+  table{
+    width:100%; border-collapse:collapse; margin:16px 0;
+    font-size:14px;
+  }
+  th,td{
+    text-align:left; padding:10px 12px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  th{ color:var(--ink-soft); font-weight:700; font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; }
+
+  .contact{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:24px;
+    text-align:center;
+  }
+  .contact h2{ border:none; padding:0; margin-bottom:6px; }
+  .contact p{ margin:0 auto 16px; }
+  .email-pill{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--accent-soft); color:var(--accent);
+    border-radius:999px; padding:10px 20px;
+    font-weight:700; font-size:15px;
+    user-select:all;
+  }
+  .copy-btn{
+    border:none; background:var(--ink); color:var(--bg);
+    border-radius:999px; padding:6px 12px; font-size:12px; font-weight:700;
+    cursor:pointer;
+  }
+
+  footer{
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:12.5px;
+    padding-block:30px 40px;
+  }
+
+  @media (max-width:480px){
+    nav.toc ol{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="mark">HA</div>
+    <div class="brand">Homework Adventure<small>Privacy Policy</small></div>
+  </header>
+
+  <h1 class="title">Privacy Policy</h1>
+  <p class="updated">Last updated <strong>September 26, 2026</strong></p>
+
+  <p class="lede">Homework Adventure is a homework-practice app that parents set up for their child. This page explains, plainly, what information the app handles, where it goes, and why — since the app is built for children, it's written to be read by parents, not lawyers.</p>
+
+  <div class="badge-row">
+    <span class="badge">No account required</span>
+    <span class="badge">No ads</span>
+    <span class="badge">No data sold</span>
+    <span class="badge">No third-party analytics</span>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="label">On this page</div>
+    <ol>
+      <li><a href="#overview">Who this app is for</a></li>
+      <li><a href="#what-we-collect">What information is stored</a></li>
+      <li><a href="#icloud">How iCloud sync works</a></li>
+      <li><a href="#voice">Reading the words aloud</a></li>
+      <li><a href="#photos">Scanning homework photos</a></li>
+      <li><a href="#microphone">Using the microphone</a></li>
+      <li><a href="#sharing">Who else sees this information</a></li>
+      <li><a href="#children">A note for parents (children's privacy)</a></li>
+      <li><a href="#control">Deleting your information</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <section id="overview">
+    <h2>Who this app is for</h2>
+    <p>Homework Adventure is designed for a parent to set up and a child to use under that parent's supervision. A parent creates the child's profile, types or speaks in the homework words and reading passages, and reviews the child's practice afterward. The app does not ask the child to create an account, sign in, or enter any information on their own.</p>
+  </section>
+
+  <section id="what-we-collect">
+    <h2>What information is stored</h2>
+    <p>Everything below is entered by the parent and stored <strong>on the device itself</strong> (and, if iCloud sync is turned on, in that family's own private iCloud account — see the next section). None of it is sent to Homework Adventure's own servers, because Homework Adventure doesn't operate any servers at all.</p>
+    <table>
+      <tr><th>Information</th><th>Why it's stored</th></tr>
+      <tr><td>Child's first name and age</td><td>Personalizes the practice screens and the parent's homework calendar</td></tr>
+      <tr><td>An emoji avatar and chosen practice languages</td><td>Lets more than one child profile exist on the same device</td></tr>
+      <tr><td>Homework words, meanings, synonyms and antonyms</td><td>What the child practices reading and pronouncing</td></tr>
+      <tr><td>Reading passages (typed, spoken, or scanned from a photo)</td><td>What the child reads aloud during practice</td></tr>
+      <tr><td>Handwriting/tracing strokes on the practice screen</td><td>Lets a parent review the child's letter-tracing practice later</td></tr>
+      <tr><td>Which words were marked correct, and stars awarded</td><td>Homework history and progress the parent can look back on</td></tr>
+    </table>
+    <p>This information stays on the device unless the parent chooses to sync it, and is never used for advertising.</p>
+  </section>
+
+  <section id="icloud">
+    <h2>How iCloud sync works</h2>
+    <p>If a parent wants the same child's homework to show up on a second device (an iPhone and an iPad, say), the app can sync through <strong>the parent's own iCloud account</strong> — the same iCloud already signed into that device in Settings. Homework Adventure never sees or has access to the parent's Apple ID, email, or iCloud password: it simply asks iOS to save a copy of the app's data into a private storage area that only this app, on that Apple ID's devices, can read.</p>
+    <p>That data is subject to Apple's own iCloud privacy practices, not Homework Adventure's — Apple, not Homework Adventure, is the one storing and transmitting it. Turning off iCloud sync (or not signing into iCloud on the device) means everything stays local to that one device only.</p>
+  </section>
+
+  <section id="voice">
+    <h2>Reading the words aloud</h2>
+    <p>When the app reads a word or passage out loud, it uses one of two voices:</p>
+    <div class="card">
+      <h3>On-device voice (used when there's no internet connection)</h3>
+      <p>Apple's built-in text-to-speech, running entirely on the device. Nothing is sent anywhere.</p>
+    </div>
+    <div class="card">
+      <h3>Online voice (used when the device is connected to the internet)</h3>
+      <p>The word or sentence text is sent over the internet to fetch a more natural-sounding audio clip. No name, age, or other personal information is included in that request — only the text being read aloud, the same way any translation or dictionary app works.</p>
+    </div>
+  </section>
+
+  <section id="photos">
+    <h2>Scanning homework photos</h2>
+    <p>A parent can take or choose a photo of a real homework page so the app can recognize the printed words on it. That text recognition happens <strong>entirely on the device</strong> — the photo is never uploaded anywhere, and Homework Adventure never sees or stores a copy of it beyond the momentary crop used to scan it.</p>
+  </section>
+
+  <section id="microphone">
+    <h2>Using the microphone</h2>
+    <p>A parent can tap the microphone button to speak an English word or passage instead of typing it. Speech recognition for this is provided by iOS itself; the recorded audio is used only to produce the text that appears in the entry box, and Homework Adventure does not keep a copy of the audio recording.</p>
+  </section>
+
+  <section id="sharing">
+    <h2>Who else sees this information</h2>
+    <p>Homework Adventure does not sell, rent, or share any information with advertisers, and does not include any third-party analytics or tracking software. The only outside services involved are:</p>
+    <ul>
+      <li><strong>Apple</strong> — for iCloud sync (if turned on), on-device text-to-speech, and on-device speech recognition, all governed by Apple's own privacy policy.</li>
+      <li><strong>The online voice service</strong> — receives only the text of a word or sentence being read aloud, with no name or other personal details attached, as described above.</li>
+    </ul>
+  </section>
+
+  <section id="children">
+    <h2>A note for parents (children's privacy)</h2>
+    <p>Homework Adventure is built around parental involvement by design: a parent sets up the profile, enters the homework content, and reviews what the child practiced. The child is never asked to type in personal information, create an account, or interact with anything outside the practice screens the parent set up for them.</p>
+    <p>If you're a parent with questions about what's stored for your child, or you'd like it deleted, see the next two sections — or just reach out using the contact details at the bottom of this page.</p>
+  </section>
+
+  <section id="control">
+    <h2>Deleting your information</h2>
+    <ul>
+      <li><strong>Delete a single word or passage</strong> — remove it directly from the homework entry screen.</li>
+      <li><strong>Delete a child's whole profile</strong> — remove it from the student picker screen; this deletes that profile's homework history from the device.</li>
+      <li><strong>Delete everything, including any iCloud copy</strong> — uninstall the app, then turn off iCloud sync for it (or disable iCloud Drive for the app) in the device's Settings before reinstalling, if you'd like a completely fresh start.</li>
+    </ul>
+    <p>If you'd rather we walk you through it, contact us using the details below.</p>
+  </section>
+
+  <section id="changes">
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the "last updated" date at the top of this page will change too. Meaningful changes — anything that affects what's collected or how it's used — will also be called out in the app's release notes.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact us</h2>
+    <p>Questions about this policy, or about your child's data? Reach out any time.</p>
+    <span class="email-pill" id="emailPill">sitarikaworks@gmail.com</span>
+    <div style="margin-top:12px;">
+      <button class="copy-btn" onclick="copyEmail()">Copy email address</button>
+    </div>
+  </section>
+
+  <footer>Homework Adventure — this page describes the app's own practices, not those of the App Store or Apple.</footer>
+</div>
+
+<script>
+  function copyEmail(){
+    const text = 'sitarikaworks@gmail.com';
+    try{
+      navigator.clipboard.writeText(text).catch(()=>{ fallbackCopy(); });
+    }catch(e){ fallbackCopy(); }
+  }
+  function fallbackCopy(){
+    const el = document.getElementById('emailPill');
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+</script>
+
+</body>
+</html>
